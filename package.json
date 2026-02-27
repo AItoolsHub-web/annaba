@@ -1,0 +1,24 @@
+{
+  "name": "visit-annaba",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace @visit-annaba/web run dev",
+    "dev:api": "npm --workspace @visit-annaba/api run dev",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces",
+    "format": "prettier --write .",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "tsx prisma/seed.ts"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prisma": "^5.17.0",
+    "tsx": "^4.16.5",
+    "typescript": "^5.5.4"
+  }
+}
