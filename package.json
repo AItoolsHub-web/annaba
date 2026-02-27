@@ -1,24 +1,29 @@
 {
-  "name": "visit-annaba",
+  "name": "@visit-annaba/web",
+  "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "dev:web": "npm --workspace @visit-annaba/web run dev",
-    "dev:api": "npm --workspace @visit-annaba/api run dev",
-    "build": "npm run build --workspaces",
-    "lint": "npm run lint --workspaces",
-    "format": "prettier --write .",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev",
-    "prisma:seed": "tsx prisma/seed.ts"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "framer-motion": "^11.3.24",
+    "lucide-react": "^0.411.0",
+    "next": "14.2.5",
+    "next-intl": "^3.16.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "recharts": "^2.12.7",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
-    "prettier": "^3.3.3",
-    "prisma": "^5.17.0",
-    "tsx": "^4.16.5",
-    "typescript": "^5.5.4"
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.7"
   }
 }
